@@ -105,13 +105,53 @@ class _RegisterFormState extends State<RegisterForm> {
                   fontWeight: FontWeight.w100),
             ),
           ),
+
+          //------ Email Form Field
+              TextFormField(
+            textAlign: TextAlign.center,
+            controller: _emailController,
+            onSaved: (email) => this.email = email,
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter your last name.';
+              }
+              return null;
+            },
+            style: TextStyle(
+                color: Colors.grey, fontSize: 18, fontWeight: FontWeight.w100),
+            cursorColor: Colors.grey,
+            keyboardType: TextInputType.name,
+            decoration: InputDecoration(
+              border: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.grey, width: 1, style: BorderStyle.solid)),
+              focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.grey, width: 1, style: BorderStyle.solid)),
+              enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.grey, width: 1, style: BorderStyle.solid)),
+              errorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.grey, width: 1, style: BorderStyle.solid)),
+              disabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.grey, width: 1, style: BorderStyle.solid)),
+              labelText: 'Email Address',
+              floatingLabelBehavior: FloatingLabelBehavior.never,
+              labelStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w100),
+            ),
+          ),
           TextFormField(
             textAlign: TextAlign.center,
             controller: _passwordController,
             onSaved: (password) => this.password = password,
             validator: (value) {
               if (value.isEmpty) {
-                return 'Password should be at least 6 characters.';
+                return 'Please enter a valid email address.';
               }
               return null;
             },
