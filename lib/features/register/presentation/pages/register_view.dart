@@ -21,6 +21,7 @@ class RegisterScreen extends StatelessWidget {
           ),
           SizedBox(height: screenHeight * 0.1),
           Container(
+            padding: EdgeInsets.all(screenWidth * 0.25),
             height: screenHeight * 0.5,
             child: RegisterForm(),
           ),
