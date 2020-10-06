@@ -11,6 +11,8 @@ dependencies:
     firebase_core: ^0.5.0
     cupertino_icons: ^1.0.0
     provider: ^4.0.4
+    flutter_bloc: ^6.0.6
+    bloc_provider: ^0.7.0+1
 
 dev_dependencies:
     flutter_test:
