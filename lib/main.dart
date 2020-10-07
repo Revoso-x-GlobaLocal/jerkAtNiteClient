@@ -12,7 +12,8 @@ class JerkAtNiteClient extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegisterScreen(),
+      //home: RegisterScreen(),
+      home: LoginScreen(),
     );
   }
 }
