@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jerk_at_nite_client/features/login/presentation/pages/login_view.dart';
+import 'package:jerk_at_nite_client/features/navigation/presentation/pages/home_screen.dart';
 import 'package:jerk_at_nite_client/features/register/presentation/pages/register_view.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class JerkAtNiteClient extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: RegisterScreen(),
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
