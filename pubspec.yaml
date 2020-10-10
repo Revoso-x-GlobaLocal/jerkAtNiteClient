@@ -13,6 +13,8 @@ dependencies:
     provider: ^4.0.4
     flutter_bloc: ^5.0.1
     bloc_provider: ^0.7.0+1
+    responsive_builder: ^0.2.0+2
+    get_it: ^4.0.2
 
 dev_dependencies:
     flutter_test:
