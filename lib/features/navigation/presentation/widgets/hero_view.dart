@@ -3,10 +3,11 @@ import 'package:jerk_at_nite_client/shared/screen_dimensions.dart';
 
 class HeroView extends StatelessWidget {
   final Widget genericWidget;
+  final num height;
 
   final BoxDecoration boxDecoration;
 
-  const HeroView({this.genericWidget, this.boxDecoration});
+  const HeroView({@required this.genericWidget, @required this.boxDecoration, @required this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class HeroView extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: screen.screenHeight * .4,
+          height: height,
           width: screen.screenWidth,
           decoration: boxDecoration,
         ),

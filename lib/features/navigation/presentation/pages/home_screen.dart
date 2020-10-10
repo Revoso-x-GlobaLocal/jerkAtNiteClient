@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           HeroView(
+            height: screen.screenHeight * 0.4,
             boxDecoration: BoxDecoration(color: Colors.red[900]),
             genericWidget: Align(
               alignment: Alignment.bottomCenter,
@@ -33,15 +34,20 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Hungry Mon",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 56,
-                  fontWeight: FontWeight.w900),
+          SizedBox(height: 40),
+          HeroView(
+            height: screen.screenHeight * 0.1,
+            boxDecoration: BoxDecoration(color: Colors.red),
+            genericWidget: Container(
+              child: Center(
+                child: Text(
+                  "Hungry Mon",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 56,
+                      fontWeight: FontWeight.w900),
+                ),
+              ),
             ),
           ),
           Container(
@@ -72,16 +78,22 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Likkle Tingz",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 56,
-                  fontWeight: FontWeight.w900),
+              HeroView(
+            height: screen.screenHeight * 0.1,
+            boxDecoration: BoxDecoration(color: Colors.red),
+            genericWidget: Container(
+              child: Center(
+                child: Text(
+                  "Likkle Tingz",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 56,
+                      fontWeight: FontWeight.w900),
+                ),
+              ),
             ),
           ),
+      
           Container(
             height: screen.screenHeight * .5,
             width: screen.screenWidth * .5,
@@ -110,14 +122,19 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Desserts",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 56,
-                  fontWeight: FontWeight.w900),
+                HeroView(
+            height: screen.screenHeight * 0.1,
+            boxDecoration: BoxDecoration(color: Colors.red),
+            genericWidget: Container(
+              child: Center(
+                child: Text(
+                  "Desserts",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 56,
+                      fontWeight: FontWeight.w900),
+                ),
+              ),
             ),
           ),
           Container(
