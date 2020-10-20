@@ -5,6 +5,7 @@ import 'package:jerk_at_nite_client/shared/locator.dart';
 import 'package:jerk_at_nite_client/shared/navigation_service.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import 'navigation_bar.dart';
 import 'navigation_drawer.dart';
 
 class LayoutTemplate extends StatelessWidget {
@@ -20,7 +21,7 @@ class LayoutTemplate extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Column(
           children: <Widget>[
-            // NavigationBar(),
+            NavigationBar(),
             Expanded(
               child: Navigator(
                 key: locator<NavigationService>().navigatorKey,

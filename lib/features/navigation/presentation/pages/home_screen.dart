@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:jerk_at_nite_client/features/navigation/presentation/widgets/hero_view.dart';
 import 'package:jerk_at_nite_client/shared/screen_dimensions.dart';
@@ -12,158 +13,69 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(
         children: [
-          HeroView(
-            height: screen.screenHeight * 0.4,
-            boxDecoration: BoxDecoration(color: Colors.red[900]),
-            genericWidget: Align(
-              alignment: Alignment.bottomCenter,
-              child: Column(
-                children: [
-                  Text(
-                    "Do Ya Body Rite",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 72,
-                        fontWeight: FontWeight.w100),
-                  ),
-                  Text(
-                    "Menu",
-                    style: TextStyle(color: Colors.white, fontSize: 72),
-                  ),
-                ],
-              ),
-            ),
+          CarouselSlider(
+            options: CarouselOptions(height: 600.0, viewportFraction: 1),
+            items: [1, 2, 3, 4, 5].map((i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(color: Colors.amber),
+                      child: Text(
+                        'text $i',
+                        style: TextStyle(fontSize: 16.0),
+                      ));
+                },
+              );
+            }).toList(),
           ),
-          SizedBox(height: 40),
-          HeroView(
-            height: screen.screenHeight * 0.1,
-            boxDecoration: BoxDecoration(color: Colors.red),
-            genericWidget: Container(
-              child: Center(
-                child: Text(
-                  "Hungry Mon",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 56,
-                      fontWeight: FontWeight.w900),
-                ),
-              ),
-            ),
-          ),
+          SizedBox(height: 20),
           Container(
-            height: screen.screenHeight * .5,
-            width: screen.screenWidth * .5,
-            child: GridView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              padding: EdgeInsets.all(50),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: 4,
-                mainAxisSpacing: screen.screenHeight * 0.005,
-                crossAxisSpacing: screen.screenWidth * 0.005,
-                crossAxisCount: 3,
-              ),
-              itemCount: 9,
-              itemBuilder: (context, index) {
-                return GridTile(
-                    child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                  child: Center(
-                    child: Text("Menu Item " + index.toString()),
-                  ),
-                ));
-              },
+            height: 400,
+            width: screen.screenWidth,
+            child: Row(
+              children: [
+                Container(
+                  height: 400,
+                  width: screen.screenWidth / 2,
+                  color: Colors.white10,
+                ),
+                Container(
+                  height: 400,
+                  width: screen.screenWidth / 2,
+                  color: Colors.cyan[700],
+                ),
+              ],
             ),
           ),
           SizedBox(height: 20),
-              HeroView(
-            height: screen.screenHeight * 0.1,
-            boxDecoration: BoxDecoration(color: Colors.red),
-            genericWidget: Container(
-              child: Center(
-                child: Text(
-                  "Likkle Tingz",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 56,
-                      fontWeight: FontWeight.w900),
-                ),
-              ),
-            ),
-          ),
-      
           Container(
-            height: screen.screenHeight * .5,
-            width: screen.screenWidth * .5,
-            child: GridView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              padding: EdgeInsets.all(50),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: 4,
-                mainAxisSpacing: screen.screenHeight * 0.005,
-                crossAxisSpacing: screen.screenWidth * 0.005,
-                crossAxisCount: 3,
-              ),
-              itemCount: 9,
-              itemBuilder: (context, index) {
-                return GridTile(
-                    child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                  child: Center(
-                    child: Text("Menu Item " + index.toString()),
-                  ),
-                ));
-              },
-            ),
-          ),
-          SizedBox(height: 20),
-                HeroView(
-            height: screen.screenHeight * 0.1,
-            boxDecoration: BoxDecoration(color: Colors.red),
-            genericWidget: Container(
-              child: Center(
-                child: Text(
-                  "Desserts",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 56,
-                      fontWeight: FontWeight.w900),
+            height: 300,
+            width: screen.screenWidth,
+            child: Row(
+              children: [
+                Container(
+                  height: 300,
+                  width: screen.screenWidth / 3,
+                  color: Colors.green[700],
                 ),
-              ),
+                Container(
+                  height: 300,
+                  width: screen.screenWidth / 3,
+                  color: Colors.deepOrange[300],
+                ),
+                Container(
+                  height: 300,
+                  width: screen.screenWidth / 3,
+                  color: Colors.deepPurpleAccent[700],
+                ),
+              ],
             ),
           ),
-          Container(
-            height: screen.screenHeight * .5,
-            width: screen.screenWidth * .5,
-            child: GridView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              padding: EdgeInsets.all(50),
+          GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: 4,
-                mainAxisSpacing: screen.screenHeight * 0.005,
-                crossAxisSpacing: screen.screenWidth * 0.005,
-                crossAxisCount: 3,
-              ),
-              itemCount: 9,
-              itemBuilder: (context, index) {
-                return GridTile(
-                    child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                  child: Center(
-                    child: Text("Menu Item " + index.toString()),
-                  ),
-                ));
-              },
-            ),
-          ),
+                  crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
+              itemBuilder: null)
         ],
       ),
     );
