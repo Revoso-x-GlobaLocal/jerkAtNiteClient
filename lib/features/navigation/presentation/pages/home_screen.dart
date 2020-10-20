@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: screen.screenHeight * 0.025),
-          
+          Align(child: Text("#DoYaBodyRite", )),
           SizedBox(height: screen.screenHeight * 0.025),
           Container(
             height: screen.screenHeight / 1.5,
@@ -82,7 +82,9 @@ class HomeScreen extends StatelessWidget {
             child: GridView.builder(
                 itemCount: 10,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 5, mainAxisSpacing: 20, crossAxisSpacing: 20),
+                    crossAxisCount: 5,
+                    mainAxisSpacing: 20,
+                    crossAxisSpacing: 20),
                 itemBuilder: (ctx, i) {
                   return Container(
                     color: Colors.red,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jerk_at_nite_client/features/navigation/data/datasources/route_names.dart';
+import 'package:jerk_at_nite_client/features/navigation/presentation/widgets/logo_view.dart';
 
 import 'nav_bar_item.dart';
 
@@ -27,14 +28,7 @@ class NavigationBar extends StatelessWidget {
             // NavBarLogo(),
             NavBarItem('Menu', MenuRoute),
             NavBarItem('Catering', LocationsRoute),
-            Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.amberAccent,
-              ),
-            ),
+            LogoView(),
             NavBarItem('Our Story', AboutRoute),
             NavBarItem('Careers', CareersRoute),
 
