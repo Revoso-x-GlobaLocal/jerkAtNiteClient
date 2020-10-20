@@ -72,17 +72,25 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          GridView.builder(
-              itemCount: 8,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
-              itemBuilder: (ctx, i) {
-                return Container(
-                  color: Colors.red,
-                  height: screen.screenHeight / 20,
-                  width: screen.screenWidth / 20,
-                );
-              }),
+          SizedBox(height: screen.screenHeight * 0.025),
+          
+          SizedBox(height: screen.screenHeight * 0.025),
+          Container(
+            height: screen.screenHeight / 1.5,
+            width: screen.screenWidth,
+            padding: EdgeInsets.all(20),
+            child: GridView.builder(
+                itemCount: 10,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 5, mainAxisSpacing: 20, crossAxisSpacing: 20),
+                itemBuilder: (ctx, i) {
+                  return Container(
+                    color: Colors.red,
+                    height: screen.screenHeight / 40,
+                    width: screen.screenWidth / 40,
+                  );
+                }),
+          ),
         ],
       ),
     );
